@@ -25,7 +25,7 @@ export const TableContainer = styled.div`
     height: 293px;
   }
   @media (min-width: 900px) {
-    font-size: 28px;
+    font-size: 25px;
     height: 393px;
   }
 `;
