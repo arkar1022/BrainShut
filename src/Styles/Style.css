@@ -1,0 +1,41 @@
+.red:hover{
+    background-color: red;
+}
+.blue:hover{
+    background-color: blue;
+}
+.black:hover{
+    background-color: black;
+}
+.green:hover{
+    background-color: green;
+}
+.purple:hover{
+    background-color: purple;
+}
+.gridCenter{
+    display: flex;
+    justify-content: center;
+}
+
+.gridACenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gridRight{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.gridLeft{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.gridCenterBase{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
