@@ -107,7 +107,7 @@ const Home = () => {
             <Grid item xs={3}>
               <ProfilePic
                 style={{ display: "inline" }}
-                image="https://visafoto.com/img/source355x388_cn.jpg"
+                image="https://visafoto.com/img/passport-photo-original7.jpg"
                 roundedColor="#828282"
                 imageWidth="60"
                 imageHeight="60"
@@ -125,9 +125,9 @@ const Home = () => {
               }}
             >
               <InfoTxt>
-                HninYu983
+              Minsoe932
                 <br />
-                hinyu323@gmail.com
+                minsoe002@gmail.com
               </InfoTxt>
             </Grid>
             <Grid item xs={12}>
