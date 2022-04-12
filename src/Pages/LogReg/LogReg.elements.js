@@ -1,14 +1,13 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { TextField, Typography, Button } from "@mui/material";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { TextField } from "@mui/material";
+import { Link } from "react-router-dom";
 
 export const SLTitle = styled.button`
   font-weight: bold;
   text-decoration: none;
   border: none;
   outline: none;
-  background-color: #e5e5e5;
+  background-color: #ebebeb;
 
   @media (min-width: 0px) {
     font-size: 20px;
@@ -22,7 +21,7 @@ export const SLTitle = styled.button`
 
   &:hover {
     transform: scale(1.3);
-    cursor: pointer ;
+    cursor: pointer;
   }
 `;
 
@@ -47,11 +46,10 @@ export const ButtonText = styled.div`
 export const SLBox = styled.div`
   background: white;
   border: none;
-  box-shadow: 0px 0px 5px 5px black;
+  box-shadow: 0px 0px 5px 5px #828282;
   border-radius: 40px;
-  background-color: #e5e5e5;
+  background-color: #ebebeb;
   padding: 30px 40px;
-
 `;
 export const SLField = styled(TextField)`
   width: auto;
@@ -61,7 +59,7 @@ export const SLField = styled(TextField)`
   border-radius: 30px;
 `;
 
-export const FLink = styled.a`
+export const FLink = styled(Link)`
   text-decoration: none;
   color: black;
   align-items: right;
@@ -69,7 +67,7 @@ export const FLink = styled.a`
   display: flex;
 
   &:hover {
-    cursor: pointer ;
+    cursor: pointer;
     font-weight: 600;
   }
 `;
@@ -80,4 +78,5 @@ export const DesField = styled.div`
   justify-content: top;
   text-align: justify;
   padding: 6px 40px;
+  text-align-last: center;
 `;

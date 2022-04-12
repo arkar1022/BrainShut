@@ -1,6 +1,4 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { TextField, Typography, Button, Modal, Box } from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ReactRoundedImage from "react-rounded-image";
 
@@ -18,37 +16,35 @@ export const SeasonTxt = styled.text`
   font-size: 20px;
 `;
 export const AccBtn = styled.button`
-    border: 2px solid black;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    text-decoration: none;
-    color: black;
-    width: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.2s ease-in-out;
-    padding: 3px 20px ;
-    font-size: 15px ;
-  
+  border: 2px solid black;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+  color: black;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s ease-in-out;
+  padding: 3px 20px;
+  font-size: 15px;
 
-     &:hover{
-        background-color: black ;
-        color: white ;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.40);
-        cursor: pointer ;
-    }
-`
+  &:hover {
+    background-color: black;
+    color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+`;
 export const ScoreTxt = styled.text`
   font-family: "Josefin Sans", sans-serif;
   font-size: 13px;
-
 `;
 
 export const UserModal = styled.div`
   top: 65px;
   right: 25px;
   border: none;
-  position: absolute ;
+  position: absolute;
   box-shadow: 0px 0px 3px 3px #a1a1a1;
   border-radius: 2px;
   background-color: #cccccc;
@@ -83,7 +79,7 @@ export const UserButton = styled.button`
     background-color: black;
     color: white;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
-    cursor: pointer ;
+    cursor: pointer;
   }
 `;
 
@@ -95,4 +91,5 @@ export const DesField = styled.div`
   justify-content: top;
   text-align: justify;
   padding: 6px 40px;
+  text-align-last: center;
 `;

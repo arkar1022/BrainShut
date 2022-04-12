@@ -4,8 +4,29 @@ import { TextField } from "@mui/material";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
+import { Link } from "react-router-dom";
 
-export const ScoreContainer = styled(Accordion)` margin-bottom:5px;`;
+export const ScoreContainer = styled(Accordion)`
+  .MuiButtonBase-root {
+    display: flex;
+    padding: 10px;
+  }
+`;
+
+export const FLink = styled(Link)`
+  text-decoration: none;
+  color: black;
+  align-items: right;
+  justify-content: right;
+  display: flex;
+  margin-bottom: 10px ;
+
+  &:hover {
+    cursor: pointer;
+    font-weight: 600;
+  }
+`;
+
 export const Season = styled(AccordionSummary)``;
 export const Score = styled(AccordionDetails)``;
 
@@ -103,6 +124,7 @@ export const Modal = styled.div`
   position: fixed;
   top: 50%;
   left: 50%;
+  transition-duration: 5s;
   transform: translate(-50%, -50%);
   background: white;
   padding: 40px;

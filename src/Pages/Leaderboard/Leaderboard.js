@@ -7,7 +7,7 @@ import {
   UserScoreContainer,
 } from "./Leaderboard.elements";
 import { InfoIcon, STitle, ArrowIcon,} from "../../Styles";
-import { Grid, Box, Checkbox } from "@mui/material";
+import { Grid, Box} from "@mui/material";
 import {
   faInfoCircle,
   faArrowLeft,

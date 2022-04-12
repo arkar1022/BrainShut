@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import styledComponents from "styled-components";
-// export const Title = styled.div`
-//     font-size: 80px;
-//     font-weight: bold;
-// `
+import { Link } from "react-router-dom";
+
+export const RLink = styled(Link)`
+text-decoration: none ;
+`;
 
 export const Answer = styled.div`
   margin-top: 20px;
@@ -66,15 +66,12 @@ export const STitle = styled.div`
   }
 `;
 
-export const Timer = styled.div`
-  font-size: 50px;
-  font-weight: bold;
-`;
 export const InfoIcon = styled(FontAwesomeIcon)`
   position: fixed;
   height: 30px;
   bottom: 10px;
   right: 10px;
+  color: black;
 
   &:hover {
     cursor: pointer;

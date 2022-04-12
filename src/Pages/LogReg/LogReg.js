@@ -8,11 +8,11 @@ import {
   SLForm,
   BtnContainer,
 } from "./LogReg.elements";
-import { Button,InfoIcon,VerticalL,Title } from "../../Styles";
+import { Button, InfoIcon, VerticalL, Title, RLink} from "../../Styles";
 import { Grid, Box, Checkbox } from "@mui/material";
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import "../../Styles/Style.css";
-import {InputAdornment, IconButton } from "@material-ui/core";
+import { InputAdornment, IconButton } from "@material-ui/core";
 import Visibility from "@material-ui/icons/Visibility";
 import VisibilityOff from "@material-ui/icons/VisibilityOff";
 
@@ -23,16 +23,13 @@ const LogReg = () => {
   const [swtichSLTxt, setSwitchSLTxt] = React.useState("Login");
 
   const [showPassword, setShowPassword] = React.useState(false);
-const handleClickShowPassword = () => setShowPassword(!showPassword);
+  const handleClickShowPassword = () => setShowPassword(!showPassword);
 
-  const buttonHandler = () => {
-    setSLBox(!showSLBox);
-  };
+  const buttonHandler = () => setSLBox(!showSLBox);
 
   return (
+    <>
     <Box mx={4} mt={12} sx={{ flexGrow: 1 }}>
-      <InfoIcon icon={faInfoCircle} />
-
       <Grid container spacing={2}>
         <Grid
           item
@@ -117,8 +114,8 @@ const handleClickShowPassword = () => setShowPassword(!showPassword);
                     <SLField
                       placeholder="Password"
                       variant="standard"
-                      type={showPassword ? "text" : "password"} // <-- This is where the magic happens
-                      InputProps={{ // <-- This is where the toggle button is added.
+                      type={showPassword ? "text" : "password"}
+                      InputProps={{
                         disableUnderline: true,
                         endAdornment: (
                           <InputAdornment position="end">
@@ -126,10 +123,14 @@ const handleClickShowPassword = () => setShowPassword(!showPassword);
                               aria-label="toggle password visibility"
                               onClick={handleClickShowPassword}
                             >
-                              {showPassword ? <Visibility /> : <VisibilityOff />}
+                              {showPassword ? (
+                                <Visibility />
+                              ) : (
+                                <VisibilityOff />
+                              )}
                             </IconButton>
                           </InputAdornment>
-                        )
+                        ),
                       }}
                     />
                   </SLForm>
@@ -140,11 +141,11 @@ const handleClickShowPassword = () => setShowPassword(!showPassword);
                       variant="standard"
                       InputProps={{ disableUnderline: true }}
                     />
-                      <SLField
+                    <SLField
                       placeholder="Password"
                       variant="standard"
-                      type={showPassword ? "text" : "password"} // <-- This is where the magic happens
-                      InputProps={{ // <-- This is where the toggle button is added.
+                      type={showPassword ? "text" : "password"}
+                      InputProps={{
                         disableUnderline: true,
                         endAdornment: (
                           <InputAdornment position="end">
@@ -152,10 +153,14 @@ const handleClickShowPassword = () => setShowPassword(!showPassword);
                               aria-label="toggle password visibility"
                               onClick={handleClickShowPassword}
                             >
-                              {showPassword ? <Visibility /> : <VisibilityOff />}
+                              {showPassword ? (
+                                <Visibility />
+                              ) : (
+                                <VisibilityOff />
+                              )}
                             </IconButton>
                           </InputAdornment>
-                        )
+                        ),
                       }}
                     />
                     <div
@@ -165,10 +170,14 @@ const handleClickShowPassword = () => setShowPassword(!showPassword);
                       }}
                     >
                       <Grid container spacing={0}>
-                        <Grid item xs={6} style={{
-                              display: "flex",
-                              alignItems:"center",
-                            }}>
+                        <Grid
+                          item
+                          xs={6}
+                          style={{
+                            display: "flex",
+                            alignItems: "center",
+                          }}
+                        >
                           <Checkbox
                             style={{
                               display: "inline",
@@ -176,12 +185,16 @@ const handleClickShowPassword = () => setShowPassword(!showPassword);
                           />
                           Remeber
                         </Grid>
-                        <Grid item xs={6} style={{
-                              display: "flex",
-                              alignItems:"center",
-                              justifyContent:"flex-end",
-                            }}>
-                          <FLink href="www.google.com">Forgot Password?</FLink>
+                        <Grid
+                          item
+                          xs={6}
+                          style={{
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "flex-end",
+                          }}
+                        >
+                          <FLink to={"/forgotpassword"}>Forgot Password? </FLink>
                         </Grid>
                       </Grid>
                     </div>
@@ -207,14 +220,9 @@ const handleClickShowPassword = () => setShowPassword(!showPassword);
           </Box>
         </Grid>
         <Grid item xs={0} md={1} className="gridCenter">
-              <VerticalL></VerticalL>
+          <VerticalL></VerticalL>
         </Grid>
-        <Grid
-          item
-          xs={12}
-          md={6}
-          className="gridCenter"
-        >
+        <Grid item xs={12} md={6} className="gridCenter">
           <DesField>
             Fiction-writing also has modes: action, exposition, description,
             dialogue, summary, and transition.[4] Author Peter Selgin refers to
@@ -235,6 +243,10 @@ const handleClickShowPassword = () => setShowPassword(!showPassword);
         </Grid>
       </Grid>
     </Box>
+    <RLink to={"/developerintro"}>
+    <InfoIcon icon={faInfoCircle} />
+    </RLink>
+    </>
   );
 };
 

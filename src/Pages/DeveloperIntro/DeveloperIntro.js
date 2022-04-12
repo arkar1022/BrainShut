@@ -7,8 +7,7 @@ import {
   Item,
   Icon,
 } from "./DeveloperIntro.elements";
-import { InfoIcon, STitle, ArrowIcon } from "../../Styles";
-import { Grid, Box, Checkbox } from "@mui/material";
+import { Grid, Box} from "@mui/material";
 import {
   faFacebook,
   faLinkedin,

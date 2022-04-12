@@ -5,8 +5,8 @@ import {
   CatIcon,
   CatText,
 } from "./Category.elements";
-import { InfoIcon, STitle, ArrowIcon } from "../../Styles";
-import { Grid, Box, Checkbox } from "@mui/material";
+import { InfoIcon, STitle, ArrowIcon, RLink } from "../../Styles";
+import { Grid, Box } from "@mui/material";
 import {
   faInfoCircle,
   faArrowLeft,
@@ -14,12 +14,12 @@ import {
   faLandmarkDome,
   faFlask,
   faMicrochip,
-  faDice
+  faDice,
 } from "@fortawesome/free-solid-svg-icons";
 import "../../Styles/Style.css";
 
 const Category = () => {
-
+  
   return (
     <>
       <Box mx={4} mt={7} sx={{ flexGrow: 1 }}>
@@ -33,7 +33,9 @@ const Category = () => {
               alignItems: "center",
             }}
           >
+            <RLink to={"/home"}>
             <ArrowIcon icon={faArrowLeft} />
+            </RLink>
             <STitle>Category</STitle>
           </Grid>
           <Grid item xs={12} className="gridCenter">
@@ -47,28 +49,36 @@ const Category = () => {
                   >
                     <Grid container spacing={3}>
                       <Grid item xs={12} md={6} className="gridCenter">
-                        <CategoryBtn className="red">
-                          <CatText>Geography</CatText>
-                          <CatIcon icon={faGlobeAsia} />
-                        </CategoryBtn>
+                        <RLink to={"/quiz"}>
+                          <CategoryBtn className="red">
+                            <CatText>Geography</CatText>
+                            <CatIcon icon={faGlobeAsia} />
+                          </CategoryBtn>
+                        </RLink>
                       </Grid>
                       <Grid item xs={12} md={6} className="gridCenter">
-                        <CategoryBtn className="blue">
-                          <CatText>History</CatText>
-                          <CatIcon icon={faLandmarkDome} />
-                        </CategoryBtn>
+                        <RLink to={"/quiz"}>
+                          <CategoryBtn className="blue">
+                            <CatText>History</CatText>
+                            <CatIcon icon={faLandmarkDome} />
+                          </CategoryBtn>
+                        </RLink>
                       </Grid>
                       <Grid item xs={12} md={6} className="gridCenter">
-                        <CategoryBtn className="black">
-                          <CatText>Science</CatText>
-                          <CatIcon icon={faFlask} />
-                        </CategoryBtn>
+                        <RLink to={"/quiz"}>
+                          <CategoryBtn className="black">
+                            <CatText>Science</CatText>
+                            <CatIcon icon={faFlask} />
+                          </CategoryBtn>
+                        </RLink>
                       </Grid>
                       <Grid item xs={12} md={6} className="gridCenter">
-                        <CategoryBtn className="green">
-                          <CatText>Technology</CatText>
-                          <CatIcon icon={faMicrochip} />
-                        </CategoryBtn>
+                        <RLink to={"/quiz"}>
+                          <CategoryBtn className="green">
+                            <CatText>Technology</CatText>
+                            <CatIcon icon={faMicrochip} />
+                          </CategoryBtn>
+                        </RLink>
                       </Grid>
                     </Grid>
                   </Box>
@@ -81,7 +91,7 @@ const Category = () => {
                   className="gridCenter"
                 >
                   <CategoryBtn className="purple" style={{ height: "auto" }}>
-                  <CatText>Random</CatText>
+                    <CatText>Random</CatText>
                     <CatIcon icon={faDice} />
                   </CategoryBtn>
                 </Grid>
@@ -89,7 +99,9 @@ const Category = () => {
             </CatContainer>
           </Grid>
         </Grid>
-        <InfoIcon icon={faInfoCircle} />
+        <RLink to={"/developerintro"}>
+          <InfoIcon icon={faInfoCircle} />
+        </RLink>
       </Box>
     </>
   );

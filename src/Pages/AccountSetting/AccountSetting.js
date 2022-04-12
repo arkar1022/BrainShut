@@ -13,17 +13,17 @@ import {
   Score,
   ScoreTxt,
   ScrollBox,
+  FLink,
 } from "./AccountSetting.elements";
 import {
-  InfoIcon,
   Button,
   ArrowIcon,
   VerticalL,
   BulletIcon,
+  RLink,
 } from "../../Styles";
-import { Grid, Box, Checkbox } from "@mui/material";
+import { Grid, Box} from "@mui/material";
 import {
-  faInfoCircle,
   faArrowLeft,
   faXmark,
   faCircle,
@@ -57,7 +57,9 @@ const AccountSetting = () => {
               alignItems: "center",
             }}
           >
+            <RLink to={"/home"}>
             <ArrowIcon icon={faArrowLeft} />
+            </RLink>
           </Grid>
           <Grid
             item
@@ -95,6 +97,7 @@ const AccountSetting = () => {
                     style={{ marginRight: 10, height: "45px" }}
                     onClick={() => {
                       editBtnHandler();
+                      setShowPwdModal(false);
                     }}
                   >
                     <TxtBox>Edit</TxtBox>
@@ -103,6 +106,7 @@ const AccountSetting = () => {
                     style={{ height: "45px" }}
                     onClick={() => {
                       pwdBtnHandler();
+                      setShowEditModal(false);
                     }}
                   >
                     <TxtBox>Change Password</TxtBox>
@@ -121,6 +125,7 @@ const AccountSetting = () => {
                   expandIcon={<ExpandMoreIcon />}
                   aria-controls="panel1a-content"
                   id="panel1a-header"
+                  aria-expanded="true"
                 >
                  <TxtBox>Season 1 - Autumn</TxtBox>
                 </Season>
@@ -215,7 +220,6 @@ const AccountSetting = () => {
             </ScrollBox>
           </Grid>
         </Grid>
-        <InfoIcon icon={faInfoCircle} />
       </Box>
       {showEditModal ? (
         <Modal>
@@ -310,6 +314,7 @@ const AccountSetting = () => {
               ),
             }}
           />
+          <FLink to={"/forgotpassword"}>Forgot Password?</FLink>
           <ModalBtn>Confirm</ModalBtn>
         </Modal>
       ) : (
